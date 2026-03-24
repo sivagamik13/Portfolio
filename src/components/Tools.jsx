@@ -39,7 +39,7 @@ function Tools() {
             <div className="tools__set" key={k}>
               {row1.map(name => (
                 <div className="tools__chip" key={name + k}>
-                  <img className="tools__chip-icon" src={`/icons/${iconFile[name]}`} alt={name} />
+                  <img className="tools__chip-icon" src={`${import.meta.env.BASE_URL}icons/${iconFile[name]}`} alt={name} />
                   <span className="tools__chip-name">{name}</span>
                 </div>
               ))}
@@ -54,7 +54,7 @@ function Tools() {
             <div className="tools__set" key={k}>
               {row2.map(name => (
                 <div className="tools__chip" key={name + k}>
-                  <img className="tools__chip-icon" src={`/icons/${iconFile[name]}`} alt={name} />
+                  <img className="tools__chip-icon" src={`${import.meta.env.BASE_URL}icons/${iconFile[name]}`} alt={name} />
                   <span className="tools__chip-name">{name}</span>
                 </div>
               ))}

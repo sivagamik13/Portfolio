@@ -7,7 +7,7 @@ export const personalInfo = {
   bio: "I'm an innovative UI/UX Designer based in Coimbatore, India. My passion for minimalist aesthetics, elegant typography, and intuitive design shines through in my work. I specialize in creating seamless interfaces, conducting user research, and transforming complex requirements into elegant design solutions.",
   email: "sivagamik13@gmail.com",
   phone: "+91 63833 93648",
-  linkedin: "https://www.linkedin.com/in/sivagama-sundari-m",
+  linkedin: "https://www.linkedin.com/in/sivagama-sundari-m-611941217/",
   behance: "https://www.behance.net/sivagami13K",
 };
 
