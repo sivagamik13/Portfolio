@@ -1,0 +1,78 @@
+.about { width: 100%; padding: 120px 0; }
+
+/* Stats */
+.stats__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; margin-top: 32px;
+}
+
+.stat {
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 20px;
+}
+
+.stat__num {
+  font-family: var(--font-display);
+  font-size: 64px; font-weight: 600;
+  letter-spacing: -1.5px; display: block;
+  line-height: 1; margin-bottom: 8px;
+}
+
+.stat__label {
+  font-size: 13px; font-weight: 600;
+  text-transform: uppercase; color: var(--gray);
+  letter-spacing: 0.5px;
+}
+
+/* Bio */
+.about__bio {
+  font-size: 20px; font-weight: 400;
+  line-height: 1.7; color: var(--muted);
+  max-width: 700px; margin-top: 24px;
+}
+
+/* Experience */
+.exp__list { display: flex; flex-direction: column; gap: 12px; }
+
+.exp__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  transition: border-color var(--transition);
+}
+
+.exp__card:hover { border-color: var(--surface-3); }
+
+.exp__top {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 16px;
+  margin-bottom: 12px;
+}
+
+.exp__company {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: -0.5px;
+  margin-bottom: 2px;
+}
+
+.exp__role { font-size: 14px; color: var(--gray); font-weight: 500; }
+
+.exp__period {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 600;
+  color: var(--gray); white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.exp__desc { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+@media (max-width:768px) {
+  .stats__grid { grid-template-columns: repeat(2, 1fr); }
+  .stat__num { font-size: 44px; }
+  .exp__top { flex-direction: column; gap: 4px; }
+}

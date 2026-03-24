@@ -1,0 +1,44 @@
+:root {
+  --bg: #000;
+  --surface: #0A0A0A;
+  --surface-2: #161616;
+  --surface-3: #292929;
+  --white: #fff;
+  --gray: #808080;
+  --muted: rgba(255,255,255,0.6);
+  --muted-40: rgba(255,255,255,0.4);
+  --border: #161616;
+  --accent: #FF4626;
+  --green: #14C700;
+  --blue: #009DFF;
+  --radius: 13px;
+  --radius-pill: 60px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  --font-display: 'Clash Display', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --max-w: 1280px;
+  --px: 60px;
+}
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::selection { background: var(--accent); color: var(--bg); }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 3px; }
+
+@media (max-width:1024px) { :root { --px: 40px; } }
+@media (max-width:768px) { :root { --px: 20px; } }

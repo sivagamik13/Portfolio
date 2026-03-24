@@ -1,0 +1,108 @@
+.tools {
+  width: 100%;
+  padding: 120px 0 80px;
+}
+
+.tools__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 40px;
+  margin-top: 48px;
+}
+
+.tools__title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+.tools__sub {
+  font-size: 14px;
+  color: var(--gray);
+  max-width: 280px;
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* Marquee */
+.tools__marquee {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 5px var(--px);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+}
+
+.tools__track {
+  display: flex;
+  width: max-content;
+}
+
+.tools__track--left { animation: scrollL 28s linear infinite; }
+.tools__track--right { animation: scrollR 24s linear infinite; }
+
+@keyframes scrollL {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+@keyframes scrollR {
+  0% { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
+}
+
+.tools__set {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-right: 10px;
+}
+
+.tools__chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 60px;
+  padding: 12px 22px 12px 18px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color var(--transition);
+}
+
+.tools__chip:hover {
+  border-color: var(--surface-3);
+}
+
+.tools__chip-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: grayscale(1) brightness(2) contrast(0.8);
+}
+
+.tools__chip-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.2px;
+}
+
+@media (max-width: 768px) {
+  .tools__title { font-size: 32px; }
+  .tools__header { flex-direction: column; align-items: flex-start; }
+  .tools__sub { text-align: left; }
+  .tools__chip { padding: 10px 16px 10px 14px; }
+  .tools__chip-icon { width: 20px; height: 20px; }
+  .tools__chip-name { font-size: 12px; }
+}

@@ -1,0 +1,37 @@
+.process { width: 100%; padding: 120px 0 100px; }
+
+.process__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 48px;
+}
+
+.process__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  transition: border-color var(--transition);
+}
+
+.process__card:hover { border-color: var(--surface-3); }
+
+.process__step {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  text-transform: uppercase; display: block;
+  margin-bottom: 20px;
+}
+
+.process__name {
+  font-family: var(--font-display);
+  font-size: 24px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.process__desc { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+@media (max-width:768px) {
+  .process__grid { grid-template-columns: 1fr; }
+  .process { padding: 80px 0 60px; }
+}
