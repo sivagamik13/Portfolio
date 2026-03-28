@@ -30,6 +30,7 @@ function Navbar() {
           <a onClick={() => go('#projects')}>Work</a>
           <a onClick={() => go('#about')}>About</a>
           <a onClick={() => go('#tools')}>Tools</a>
+          <a href={`${import.meta.env.BASE_URL}Sivagami_resume.pdf`} target="_blank" rel="noopener noreferrer">Resume</a>
           <a className="nav__cta" onClick={() => go('#contact')}>
             <span className="nav__dot" /> Contact
           </a>

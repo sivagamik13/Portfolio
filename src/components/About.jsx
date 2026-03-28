@@ -10,14 +10,16 @@ function Counter({ value, suffix }) {
 
   useEffect(() => {
     if (!inView) return
-    const target = parseInt(value)
+    const target = parseFloat(value)
+    const isDecimal = value.includes('.')
     const duration = 1500
-    const step = Math.ceil(target / (duration / 16))
+    const steps = duration / 16
+    const step = target / steps
     let current = 0
     const timer = setInterval(() => {
       current += step
       if (current >= target) { setCount(target); clearInterval(timer); }
-      else setCount(current)
+      else setCount(isDecimal ? Math.round(current * 10) / 10 : Math.floor(current))
     }, 16)
     return () => clearInterval(timer)
   }, [inView, value])
@@ -32,8 +34,8 @@ function About() {
         {/* Stats */}
         <div className="divider" />
         <div className="sec-header" style={{ marginTop: 48 }}>
-          <span className="sec-num">03 //Stats</span>
-          <span className="sec-num">Fun Facts</span>
+          <span className="sec-num">03 //Numbers</span>
+          <span className="sec-num">At a Glance</span>
         </div>
 
         <div className="stats__grid">

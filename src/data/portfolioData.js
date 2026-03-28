@@ -38,8 +38,8 @@ export const tools = [
 ];
 
 export const stats = [
-  { value: "10", suffix: "+", label: "Projects Delivered" },
-  { value: "2", suffix: "+", label: "Years Experience" },
+  { value: "4", suffix: "+", label: "Projects Delivered" },
+  { value: "1.5", suffix: "+", label: "Years Experience" },
   { value: "35", suffix: "%", label: "Engagement Boost" },
   { value: "100", suffix: "%", label: "Client Satisfaction" },
 ];
